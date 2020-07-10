@@ -46,9 +46,10 @@ pub trait WorldDeserializer {
     ) -> Result<Box<[u8]>, D::Error>;
 }
 
-pub struct Wrapper<T: WorldDeserializer>(pub T);
+/// Deserializes a world from a deserializer
+pub struct WorldSeed<T: WorldDeserializer>(pub T);
 
-impl<'de, W: WorldDeserializer> DeserializeSeed<'de> for Wrapper<W> {
+impl<'de, W: WorldDeserializer> DeserializeSeed<'de> for WorldSeed<W> {
     type Value = World;
 
     fn deserialize<D>(self, deserializer: D) -> Result<Self::Value, D::Error>

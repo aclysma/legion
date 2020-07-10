@@ -221,7 +221,7 @@ impl<'de, T: TypeKey> DeserializeSeed<'de> for Registry<T> {
     where
         D: serde::Deserializer<'de>,
     {
-        let wrapped = de::Wrapper(self);
+        let wrapped = de::WorldSeed(self);
         wrapped.deserialize(deserializer)
     }
 }

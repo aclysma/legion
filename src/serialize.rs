@@ -33,7 +33,7 @@
 //! ```
 
 pub use crate::internals::serialize::{
-    de::WorldDeserializer,
+    de::{WorldDeserializer, WorldSeed},
     ser::{SerializableWorld, WorldSerializer},
     Registry, SerializableTypeId, TypeKey,
 };
