@@ -142,7 +142,7 @@
 //! ```
 
 pub use crate::internals::{
-    entity::{Allocate, Entity, EntityLocation, LocationMap},
+    entity::{Allocate, Entity, EntityLocation, LocationMap, EntityHasher},
     entry::{ComponentError, Entry, EntryMut, EntryRef},
     event::{Event, EventSender},
     permissions::Permissions,
